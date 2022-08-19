@@ -1,0 +1,2427 @@
+@import './base/base';
+@import './fonts.css';
+@import './base/veariables';
+@import './base/mixins';
+
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  .header {
+    @include box(1440px, 700px);
+    background: {
+      image: url(../images/Headaer\ and\ Promo.png);
+      size: cover;
+      repeat: no-repeat;
+    }
+    display: flex;
+    flex-direction: column;
+    &__logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      width: 100%;
+      min-height: 24px;
+      margin-top: 46px;
+      margin-left: 248px;
+      &_link {
+        text-decoration: none;
+        color: white;
+        font: {
+          family: 'MontserratBold';
+          size: 20px;
+        }
+        margin-right: 596px;
+      }
+      &_login {
+        @include box(153px, 36px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_text {
+          color: white;
+          font: {
+            family: 'MontserratRegular';
+            size: 14px;
+          }
+          line-height: 17px;
+        }
+        &_text:hover {
+          cursor: pointer;
+        }
+        &_button {
+          width: 90px;
+          margin-left: 19px;
+          border: 2px solid #ffffff;
+          border-radius: 40px;
+          background-color: transparent;
+          color: white;
+          font-family: 'MontserratRegular';
+        }
+        &_button:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+    }
+    &__title {
+      @include box(470px, 126px);
+      margin: 147px auto 28px;
+      &_text {
+        font: {
+          family: 'MontserratBold';
+          size: 52px;
+        }
+        color: #ffffff;
+        line-height: 63px;
+        text-align: center;
+      }
+    }
+    &__info {
+      font: {
+        family: 'RobotoLight';
+        size: 24px;
+      }
+      line-height: 24px;
+      display: block;
+      margin: 29px auto 33px;
+      color: $main-color;
+    }
+    &__button {
+      @include box(225px, 40px);
+      color: #ffffff;
+      background-color: $second-color;
+      border: 2px solid $second-color;
+      border-radius: 40px;
+      margin: 0 auto;
+    }
+    &__button:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+  .dreamshare {
+    width: 940px;
+    min-height: 400px;
+    margin: 95px auto;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font: {
+        size: 26px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 32px;
+      color: #444444;
+    }
+    &__blocks {
+      @include box(940px, 400px);
+      margin: 35px auto 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &_step1,
+      &_step2,
+      &_step3 {
+        @include box(300px, 400px);
+      }
+      &_step1 {
+        background: {
+          image: url(../images/Step\ 1.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            219px 205px 15px 25px,
+            13px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          display: flex;     
+          color: #ffffff;
+          line-height: 26px;
+          align-items: flex-end;
+          margin: 0 25px 10px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          @include box(250px, 57px);
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 25px 21px;
+        }
+      }
+      &_step2 {
+        background: {
+          image: url(../images/Step\ 2.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            250px 205px 15px 25px,
+            13px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          display: flex;       
+          color: #ffffff;
+          line-height: 26px;
+          align-items: flex-end;
+          margin: 0 25px 9px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          width: 250px;
+          height: 57px;
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 25px 21px;
+        }
+      }
+      &_step3 {
+        background: {
+          image: url(../images/Step\ 3.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            219px 205px 15px 25px,
+            13px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          display: flex;     
+          color: #ffffff;
+          line-height: 26px;
+          align-items: flex-end;
+          margin: 0 25px 10px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          @include box(250px, 57px);
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 25px 21px;
+        }
+      }
+    }
+  }
+  .meet{
+    @include box(941px, 361px);
+    margin: 0 auto 95px;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font: {
+        size: 26px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 32px;
+      color: #444444;
+    }
+    &__blocks{
+      @include box(941px, 205px);
+      margin-top: 35px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &_left{
+        @include box(461px, 205px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_bradley{
+          @include box(221px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_1_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: $second-color;
+              image: url(../images/music2.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+        &_marie{
+          @include box(221px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_2_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #19D4CA;
+              image: url(../images/brush.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+      }
+      &_right{
+        @include box(461px, 205px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_diana{
+          @include box(221px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_3_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #FFA710;
+              image: url(../images/camera.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+        &_christofer{
+          @include box(221px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_4_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #667DF3;
+              image: url(../images/airplane.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+
+      }
+    }
+    &__button{
+      @include box(180px, 40px);
+      border: 2px solid $second-color;
+      border-radius: 40px;
+      background-color: transparent;
+      color: $second-color;
+      font-family: 'MontserratBold';
+      margin: 50px auto 0;
+    }
+  }
+  .discover{
+    @include box(940px, 1031px);
+    margin: 0 auto 95px;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font: {
+        size: 26px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 32px;
+      color: $third-color;
+    }
+    &__blocks{
+      @include box(940px, 970px);
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_top{
+        @include box(940px, 310px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_first{
+          @include box(300px, 310px);
+          background: {
+            image: url(../images/Sport_1.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_second{
+          @include box(300px, 310px);
+          background: {
+            image: url(../images/Healath.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_third{
+          @include box(300px, 310px);
+          background: {
+            image: url(../images/Extreme.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+            @include box(187px, 54px);
+          }
+        }
+      }
+      &_middle{
+        @include box(940px, 310px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_first{
+          @include box(300px, 310px);
+          background: {
+            image: url(../images/Games.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_second{
+          @include box(620px, 310px);
+          background: {
+            image: url(../images/Culture.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+      }
+      &_bottom{
+        @include box(940px, 310px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_first{
+          @include box(620px, 310px);
+          background: {
+            image: url(../images/Enjoi.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_second{
+          @include box(300px, 310px);
+          background: {
+            image: url(../images/Trevelling.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+      }
+    }
+  }
+  .form{
+    @include box(482px, 158px);
+    margin: 0 auto 100px;
+    &__title{
+      font: {
+        size: 26px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 32px;
+      color: $third-color;
+    }
+    &__question{
+      font: {
+        size: 18px;
+        family: 'RobotoLight';
+      }
+      text-align: center;
+      line-height: 14px;
+      color: $fourth-color;
+      margin-top: 43px;
+    }
+    &__box{
+      @include box(482px, 40px);
+      margin-top: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      input[type='text']{
+        display: block;
+        @include box(299px, 40px);
+        border: 1px solid #D4D4D4;
+        border-radius: 3px;
+        box-shadow: 0px 1px 1px 0px #00000013;
+       input::placeholder{
+          color: #999999;
+          font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+        }
+      }
+      &_button{
+      @include box(172px, 40px);
+      color: #ffffff;
+      background-color: $second-color;
+      border: 1px solid $second-color;
+      border-radius: 40px;
+      }
+    }
+  }
+  .footer{
+    width: 1440px;
+    min-height: 224px;
+    border-top: 2px solid $second-color;
+    &__box{
+      @include box(944px, 184px);
+      margin: 38px auto 36px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      &_brand{
+        font: {
+          family: 'MontserratRegular';
+          size: 16px;
+        }
+        line-height: 20px;
+        color: $second-color;
+        margin-right: 122px;
+      }
+      &_brand:hover{
+        cursor: pointer;
+      }
+      &_company{
+        @include box(184px, 156px);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-right: 125px;
+        &_title{
+          font: {
+            family: 'MontserratBold';
+            size: 14px;
+          }
+          line-height: 17px;
+          color: $third-color;
+          margin-bottom: 11px;
+        }
+        &_first{
+          width: 184px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &_items{
+            font: {
+              family: 'RobotoLight';
+              size: 14px;
+            }
+            line-height: 26px;
+            color: $fifth-color;
+          }
+        }
+        &_second{
+          width: 184px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &_items{
+            font: {
+              family: 'RobotoLight';
+              size: 14px;
+            }
+            line-height: 26px;
+            color: $fifth-color;
+          }
+        }
+
+      }
+      &_partners{
+        font: {
+          family: 'MontserratBold';
+          size: 14px;
+        }
+        line-height: 17px;
+        color: $third-color;
+      }
+      &_designed{
+        @include box(110px, 43px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 287px;
+        &_title{
+          font: {
+            family: 'MontserratBold';
+            size: 10px;
+          }
+          letter-spacing: 1px;
+          line-height: 12px;
+          text-align: right;
+          color: $six-color;
+        }
+        &_logo{
+          @include box(110px, 24px);
+          background: {
+            image: url(../images/Bitmap.svg);
+            size: cover;
+            repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+ .wrapper {
+  width: 768px;
+  margin: 0 auto;
+  .header {
+    @include box(768px, 700px);
+    background: {
+      image: url(../images/Headaer\ and\ Promo.png);
+      size: cover;
+      repeat: no-repeat;
+    }
+    display: flex;
+    flex-direction: column;
+    &__logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      width: 100%;
+      min-height: 24px;
+      margin-top: 46px;
+      margin-left: 48px;
+      &_link {
+        text-decoration: none;
+        color: white;
+        font: {
+          family: 'MontserratBold';
+          size: 20px;
+        }
+        margin-right: 365px;
+      }
+      &_login {
+        @include box(153px, 36px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_text {
+          color: white;
+          font: {
+            family: 'MontserratRegular';
+            size: 14px;
+          }
+          line-height: 17px;
+        }
+        &_text:hover {
+          cursor: pointer;
+        }
+        &_button {
+          width: 90px;
+          margin-left: 19px;
+          border: 2px solid #ffffff;
+          border-radius: 40px;
+          background-color: transparent;
+          color: white;
+          font-family: 'MontserratRegular';
+        }
+        &_button:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+    }
+    &__title {
+      @include box(470px, 126px);
+      margin: 147px auto 28px;
+      &_text {
+        font: {
+          family: 'MontserratBold';
+          size: 52px;
+        }
+        color: #ffffff;
+        line-height: 63px;
+        text-align: center;
+      }
+    }
+    &__info {
+      font: {
+        family: 'RobotoLight';
+        size: 24px;
+      }
+      line-height: 24px;
+      display: block;
+      margin: 29px auto 33px;
+      color: $main-color;
+    }
+    &__button {
+      @include box(225px, 40px);
+      color: #ffffff;
+      background-color: $second-color;
+      border: 2px solid $second-color;
+      border-radius: 40px;
+      margin: 0 auto;
+    }
+    &__button:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+  .dreamshare {
+    width: 748px;
+    min-height: 461px;
+    margin: 95px auto;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font: {
+        size: 22px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 27px;
+      color: $third-color;
+    }
+    &__blocks {
+      @include box(748px, 400px);
+      margin: 35px auto 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      &_step1,
+      &_step2,
+      &_step3 {
+        @include box(236px, 400px);
+      }
+      &_step1 {
+        background: {
+          image: url(../images/Step\ 1.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            205px 146px 15px 20px,
+            12px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          display: flex;     
+          color: #ffffff;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 30px 20px 10px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          @include box(196px, 76px);
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 25px 21px;
+        }
+      }
+      &_step2 {
+        background: {
+          image: url(../images/Step\ 2.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            255px 146px 14px 20px,
+            12px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          display: flex;       
+          color: #ffffff;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 20px 9px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          width: 196px;
+          height: 57px;
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 20px 16px;
+        }
+      }
+      &_step3 {
+        background: {
+          image: url(../images/Step\ 3.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            205px 146px 44px 20px,
+            12px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          display: flex;     
+          color: #ffffff;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 20px 10px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          @include box(196px, 76px);
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 20px 16px;
+        }
+      }
+    }
+  }
+  .meet{
+    @include box(492px, 605px);
+    margin: 0 auto 95px;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font: {
+        size: 22px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 27px;
+      color: $third-color;
+    }
+    &__blocks{
+      @include box(492px, 464px);
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_left{
+        @include box(492px, 224px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_bradley{
+          @include box(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_1_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: $second-color;
+              image: url(../images/music2.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+        &_marie{
+          @include box(236px, 224px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_2_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #19D4CA;
+              image: url(../images/brush.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+      }
+      &_right{
+        @include box(492px, 205px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_diana{
+          @include box(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_3_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #FFA710;
+              image: url(../images/camera.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+        &_christofer{
+          @include box(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_4_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #667DF3;
+              image: url(../images/airplane.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+
+      }
+    }
+    &__button{
+      @include box(180px, 40px);
+      border: 2px solid $second-color;
+      border-radius: 40px;
+      background-color: transparent;
+      color: $second-color;
+      font-family: 'MontserratBold';
+      margin: 40px auto 0;
+    }
+  }
+  .discover{
+    @include box(748px, 1031px);
+    margin: 0 auto 95px;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font: {
+        size: 22px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 27px;
+      color: $third-color;
+    }
+    &__blocks{
+      @include box(748px, 970px);
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_top{
+        @include box(748px, 310px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_first{
+          @include box(236px, 310px);
+          background: {
+            image: url(../images/Sport_1.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+            width: 206px;
+          }
+        }
+        &_second{
+          @include box(236px, 310px);
+          background: {
+            image: url(../images/Healath.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_third{
+          @include box(236px, 310px);
+          background: {
+            image: url(../images/Extreme.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+            @include box(187px, 54px);
+          }
+        }
+      }
+      &_middle{
+        @include box(748px, 310px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_first{
+          @include box(236px, 310px);
+          background: {
+            image: url(../images/Games.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_second{
+          @include box(492px, 310px);
+          background: {
+            image: url(../images/Culture.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+      }
+      &_bottom{
+        @include box(748px, 310px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &_first{
+          @include box(492px, 310px);
+          background: {
+            image: url(../images/Enjoi.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_second{
+          @include box(236px, 310px);
+          background: {
+            image: url(../images/Trevelling.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+      }
+    }
+  }
+  .form{
+    @include box(482px, 158px);
+    margin: 0 auto 100px;
+    &__title{
+      font: {
+        size: 22px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 27px;
+      color: $third-color;
+    }
+    &__question{
+      font: {
+        size: 18px;
+        family: 'RobotoLight';
+      }
+      text-align: center;
+      line-height: 14px;
+      color: $fourth-color;
+      margin-top: 43px;
+    }
+    &__box{
+      @include box(482px, 40px);
+      margin-top: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      input[type='text']{
+        display: block;
+        @include box(299px, 40px);
+        border: 1px solid #D4D4D4;
+        border-radius: 3px;
+        box-shadow: 0px 1px 1px 0px #00000013;
+       input::placeholder{
+          color: #999999;
+          font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+        }
+      }
+      &_button{
+      @include box(172px, 40px);
+      color: #ffffff;
+      background-color: $second-color;
+      border: 1px solid $second-color;
+      border-radius: 40px;
+      font-size: 14px;
+      }
+    }
+  }
+  .footer{
+    width: 768px;
+    min-height: 224px;
+    border-top: 2px solid $second-color;
+    &__box{
+      @include box(692px, 184px);
+      margin: 40px auto 36px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      &_brand{
+        font: {
+          family: 'MontserratRegular';
+          size: 16px;
+        }
+        line-height: 20px;
+        color: $second-color;
+        margin-right: 108px;
+      }
+      &_brand:hover{
+        cursor: pointer;
+      }
+      &_company{
+        @include box(114px, 184px);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin-right: 56px;
+        &_title{
+          font: {
+            family: 'MontserratBold';
+            size: 14px;
+          }
+          line-height: 17px;
+          color: $third-color;
+          margin-bottom: 11px;
+        }
+        &_first{
+          width: 114px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &_items{
+            font: {
+              family: 'RobotoLight';
+              size: 14px;
+            }
+            line-height: 26px;
+            color: $fifth-color;
+          }
+        }
+        &_second{
+          width: 114px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &_items{
+            font: {
+              family: 'RobotoLight';
+              size: 14px;
+            }
+            line-height: 26px;
+            color: $fifth-color;
+          }
+        }
+      }
+      &_partners{
+        font: {
+          family: 'MontserratBold';
+          size: 14px;
+        }
+        line-height: 17px;
+        color: $third-color;
+      }
+      &_designed{
+        @include box(110px, 43px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 118px;
+        &_title{
+          font: {
+            family: 'MontserratBold';
+            size: 10px;
+          }
+          letter-spacing: 1px;
+          line-height: 12px;
+          text-align: right;
+          color: $six-color;
+        }
+        &_logo{
+          @include box(110px, 24px);
+          background: {
+            image: url(../images/Bitmap.svg);
+            size: cover;
+            repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+}
+@media screen and (max-width: 375px) {
+  .wrapper {
+  width: 320px;
+  margin: 0 auto;
+  .header {
+    @include box(320px, 540px);
+    background: {
+      image: url(../images/Headaer\ and\ Promo.png);
+      size: cover;
+      repeat: no-repeat;
+    }
+    display: flex;
+    flex-direction: column;
+    &__logo {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: start;
+      width: 100%;
+      min-height: 24px;
+      margin-top: 20px;
+      margin-left: 74px;
+      &_link {
+        text-decoration: none;
+        color: white;
+        font: {
+          family: 'MontserratBold';
+          size: 20px;
+        }
+        margin-right: 0px;
+        margin-top: 97px;
+      }
+      &_login {
+        @include box(153px, 36px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_text {
+          color: white;
+          font: {
+            family: 'MontserratRegular';
+            size: 14px;
+          }
+          line-height: 17px;
+        }
+        &_text:hover {
+          cursor: pointer;
+        }
+        &_button {
+          width: 90px;
+          margin-left: 19px;
+          border: 2px solid #ffffff;
+          border-radius: 40px;
+          background-color: transparent;
+          color: white;
+          font-family: 'MontserratRegular';
+        }
+        &_button:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+    }
+    &__title {
+      @include box(272px, 74px);
+      margin: 26px auto 6px;
+      &_text {
+        font: {
+          family: 'MontserratBold';
+          size: 30px;
+        }
+        color: #ffffff;
+        line-height: 37px;
+        text-align: center;
+      }
+    }
+    &__info {
+      font: {
+        family: 'RobotoLight';
+        size: 18px;
+      }
+      @include box(280px, 49px);
+      line-height: 24px;
+      display: block;
+      margin: 0px auto 15px;
+      color: $main-color;
+    }
+    &__button {
+      @include box(280px, 40px);
+      color: #ffffff;
+      background-color: $second-color;
+      border: 2px solid $second-color;
+      border-radius: 40px;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+    &__button:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+  .dreamshare {
+    width: 300px;
+    min-height: 781px;
+    margin: 35px auto 36px;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font: {
+        size: 22px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 27px;
+      color: $third-color;
+    }
+    &__blocks {
+      @include box(300px, 740px);
+      margin: 15px auto 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_step1,
+      &_step2,
+      &_step3 {
+        @include box(300px, 240px);
+      }
+      &_step1 {
+        background: {
+          image: url(../images/Step\ 1.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            64px 210px 15px 20px,
+            12px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          @include box(250px, 58px);
+          display: flex;     
+          color: #ffffff;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 30px 10px 20px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          @include box(250px, 57px);
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 30px 16px 20px;
+        }
+      }
+      &_step2 {
+        background: {
+          image: url(../images/Step\ 2.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            95px 210px 14px 20px,
+            12px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          @include box(250px, 29px);
+          display: flex;       
+          color: #ffffff;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 30px 9px 20px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          @include box(250px, 57px);
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 30px 16px 20px;
+        }
+      }
+      &_step3 {
+        background: {
+          image: url(../images/Step\ 3.png);
+          size: cover;
+          repeat: no-repeat;
+        }
+        &_button {
+          @include button(
+            70px,
+            20px,
+            #ffffff,
+            $second-color,
+            0px solid $second-color,
+            40px,
+            10px,
+            'MontserratRegular',
+            64px 210px 15px 20px,
+            12px,
+            2px);
+        }
+        &_title{
+          font: {
+            size: 24px;
+            family: 'MontserratBold';
+          }
+          @include box(250px, 58px);
+          display: flex;     
+          color: #ffffff;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 30px 10px 20px;
+        }
+        &_text{
+          font: {
+            size: 14px;
+            family: 'RobotoLight';
+          }
+          display: flex;
+          @include box(250px, 57px);
+          color: #E3E3E3;
+          line-height: 14px;
+          align-items: flex-end;
+          margin: 0 30px 16px 20px;
+        }
+      }
+    }
+  }
+  .meet{
+    @include box(300px, 1066px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font: {
+        size: 22px;
+        family: 'MontserratBold';
+      }
+      @include box(280px, 54px);
+      margin: 0 auto;
+      text-align: center;
+      line-height: 27px;
+      color: $third-color;
+    }
+    &__blocks{
+      @include box(236px, 887px);
+      margin: 14px auto 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_left{
+        @include box(236px, 426px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_bradley{
+          @include box(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_1_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: $second-color;
+              image: url(../images/music2.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+        &_marie{
+          @include box(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_2_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #19D4CA;
+              image: url(../images/brush.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+      }
+      &_right{
+        @include box(236px, 445px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 16px auto 0;
+        &_diana{
+          @include box(236px, 224px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_3_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #FFA710;
+              image: url(../images/camera.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+        &_christofer{
+          @include box(236px, 205px);
+          display: flex;
+          flex-direction: column;
+          &_photo{
+            @include box(120px, 120px);
+            margin: 0 auto;
+            border-radius: 50%;
+            background: {
+              image: url(../images/Photo_4_meet.png);
+              size: cover;
+            }
+            position: relative;
+          }
+          &_photo::after{
+            content: '';
+            @include box(32px, 32px);
+            position: absolute;
+            border: 5px solid #ffffff;
+            border-radius: 50%;
+            background: {
+              color: #667DF3;
+              image: url(../images/airplane.svg);
+              repeat: no-repeat;
+              position: center;}
+            top: 85px;
+            left: 85px;
+          }
+          &_title{
+            font: {
+              size: 14px;
+              family: 'MontserratBold';
+            }
+            color: $third-color;
+            line-height: 17px;
+            text-align: center;
+            margin-top: 17px;
+          }
+          &_text{
+            color: $fourth-color;
+            font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+            line-height: 14px;
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+    &__button{
+      @include box(280px, 40px);
+      border: 2px solid $second-color;
+      border-radius: 40px;
+      background-color: transparent;
+      color: $second-color;
+      font-family: 'MontserratBold';
+      margin: 36px auto 0;
+      font-size: 14px;
+    }
+  }
+  .discover{
+    @include box(300px, 987px);
+    margin: 0 auto 35px;
+    display: flex;
+    flex-direction: column;
+    &__title{
+      font: {
+        size: 22px;
+        family: 'MontserratBold';
+      }
+      @include box(280px, 54px);
+      text-align: center;
+      line-height: 27px;
+      color: $third-color;
+      margin: 0 auto
+    }
+    &__blocks{
+      @include box(300px, 900px);
+      margin-top: 33px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &_top{
+        @include box(300px, 380px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_first{
+          @include box(300px, 120px);
+          background: {
+            image: url(../images/Sport_1.png);
+            size: 100%;
+            repeat:no-repeat;
+            position: center;
+
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_second{
+          @include box(300px, 120px);
+          background: {
+            image: url(../images/Healath.png);
+            size: cover;
+            repeat:no-repeat;
+            position: center;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_third{
+          @include box(300px, 120px);
+          background: {
+            image: url(../images/Extreme.png);
+            size: auto;
+            repeat:no-repeat;
+            position: top;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+            @include box(206px, 54px);
+          }
+        }
+      }
+      &_middle{
+        @include box(300px, 250px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_first{
+          @include box(300px, 120px);
+          background: {
+            image: url(../images/Games.png);
+            size: cover;
+            repeat:no-repeat;
+            position: left;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_second{
+          @include box(300px, 120px);
+          background: {
+            image: url(../images/Culture.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+      }
+      &_bottom{
+        @include box(300px, 250px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_first{
+          @include box(300px, 120px);
+          background: {
+            image: url(../images/Enjoi.png);
+            size: cover;
+            repeat:no-repeat;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+        &_second{
+          @include box(300px, 120px);
+          background: {
+            image: url(../images/Trevelling.png);
+            size: cover;
+            repeat:no-repeat;
+            position: top;
+          }
+          display: flex;
+          align-items: center;
+          &_text{
+            @include text(22px, 'MontserratBold', 27px, center, #ffffff);
+          }
+        }
+      }
+    }
+  }
+  .form{
+    @include box(280px, 192px);
+    margin: 0 auto 40px;
+    &__title{
+      font: {
+        size: 22px;
+        family: 'MontserratBold';
+      }
+      text-align: center;
+      line-height: 27px;
+      color: $third-color;
+    }
+    &__question{
+      font: {
+        size: 18px;
+        family: 'RobotoLight';
+      }
+      text-align: center;
+      line-height: 14px;
+      color: $fourth-color;
+      margin-top: 9px;
+    }
+    &__box{
+      @include box(280px, 90px);
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      input[type='text']{
+        display: block;
+        @include box(274px, 37px);
+        border: 1px solid #D4D4D4;
+        border-radius: 3px;
+        box-shadow: 0px 1px 1px 0px #00000013;
+       input::placeholder{
+          color: #999999;
+          font: {
+              size: 14px;
+              family: 'RobotoLight';
+            }
+        }
+      }
+      &_button{
+      @include box(280px, 40px);
+      color: #ffffff;
+      background-color: $second-color;
+      border: 1px solid $second-color;
+      border-radius: 40px;
+      margin-top: 10px;
+      }
+    }
+  }
+  .footer{
+    width: 320px;
+    min-height: 204px;
+    border-top: 2px solid $second-color;
+    &__box{
+      @include box(280px, 183px);
+      margin: 21px auto 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      &_brand{
+        font: {
+          family: 'MontserratRegular';
+          size: 16px;
+        }
+        line-height: 20px;
+        color: $second-color;
+        margin: 0 auto 13px;
+      }
+      &_brand:hover{
+        cursor: pointer;
+      }
+      &_company{
+        @include box(280px, 70px);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        margin: 0 auto;
+        &_title{
+          font: {
+            family: 'MontserratBold';
+            size: 14px;
+          }
+          line-height: 17px;
+          color: $third-color;
+          margin: 0 auto 1px;
+        }
+        &_first{
+          width: 235px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin: 0 auto;
+          &_items{
+            font: {
+              family: 'RobotoLight';
+              size: 14px;
+            }
+            line-height: 26px;
+            color: $fifth-color;
+
+          }
+        }
+        &_second{
+          width: 200px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin: 0 auto;
+          &_items{
+            font: {
+              family: 'RobotoLight';
+              size: 14px;
+            }
+            line-height: 26px;
+            color: $fifth-color;
+          }
+        }
+
+      }
+      &_partners{
+        font: {
+          family: 'MontserratBold';
+          size: 14px;
+        }
+        line-height: 17px;
+        color: $third-color;
+        margin: 6px auto 14px;
+      }
+      &_designed{
+        @include box(110px, 43px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        &_title{
+          font: {
+            family: 'MontserratBold';
+            size: 10px;
+          }
+          margin: 0 auto;
+          letter-spacing: 1px;
+          line-height: 12px;
+          color: $six-color;
+        }
+        &_logo{
+          @include box(110px, 24px);
+          background: {
+            image: url(../images/Bitmap.svg);
+            size: cover;
+            repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+}

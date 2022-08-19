@@ -1,0 +1,26 @@
+@mixin box ($w, $h) {
+    width: $w;
+    height: $h;
+}
+@mixin button ($w, $h, $c, $bc, $b, $br, $fs, $ff, $m, $lh, $ls) {
+    width: $w;
+    height: $h;
+    color: $c;
+    background-color: $bc;
+    border: $b;
+    border-radius: $br;
+    font-size: $fs;
+    font-family: $ff;
+    margin: $m;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+@mixin text ($fs, $ff, $lh, $ta, $c) {
+    font-size: $fs;
+    font-family: $ff;
+    line-height: $lh;
+    text-align: $ta;
+    color: $c;
+
+    
+}
